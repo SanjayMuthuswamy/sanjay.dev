@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height);
+  overflow: hidden;
+}
+
+.hero__ornament {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero__ornament--top-right {
+  top: 10%;
+  right: -60px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.hero__label {
+  margin-bottom: var(--space-xl);
+}
+
+.hero__title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  margin-bottom: var(--space-xl);
+  max-width: 900px;
+}
+
+.hero__line-wrap {
+  display: block;
+  overflow: hidden;
+  perspective: 600px;
+}
+
+.hero__line {
+  display: block;
+  will-change: transform;
+}
+
+.hero__line-accent {
+  font-style: italic;
+  color: var(--accent-rust);
+}
+
+.hero__subtitle {
+  max-width: 520px;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: var(--space-2xl);
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero__btn--primary {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 24px rgba(28, 25, 23, 0.12);
+}
+
+.hero__btn--primary:hover {
+  box-shadow: 0 8px 40px rgba(28, 25, 23, 0.2);
+}
+
+.hero__btn-arrow {
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.hero__btn--primary:hover .hero__btn-arrow {
+  transform: translateX(4px);
+}
+
+.hero__btn--secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+
+.hero__btn--secondary:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-light);
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background-color: var(--text-tertiary);
+  transform-origin: top;
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero__ornament {
+    display: none;
+  }
+
+  .hero__scroll-hint {
+    display: none;
+  }
+}

@@ -1,0 +1,128 @@
+.standards {
+  background-color: var(--bg-secondary);
+}
+
+.standards__header {
+  margin-bottom: var(--space-3xl);
+}
+
+.standards__header .text-label {
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.standards__title em {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent-warm);
+}
+
+.standards__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: var(--space-3xl);
+}
+
+.standards__card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.standards__card:hover {
+  box-shadow: 0 12px 48px rgba(28, 25, 23, 0.06);
+}
+
+.standards__number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.standards__card-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-rust);
+  margin-bottom: 1rem;
+}
+
+.standards__card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-top: auto;
+}
+
+/* Principles */
+.standards__principles {
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--border-light);
+}
+
+.standards__principles .text-label {
+  display: block;
+  margin-bottom: var(--space-xl);
+}
+
+.standards__principles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.standards__principle {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: padding-left 0.4s var(--ease-out-expo);
+}
+
+.standards__principle:hover {
+  padding-left: 0.75rem;
+}
+
+.standards__principle-idx {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  min-width: 1.75rem;
+}
+
+.standards__principle-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .standards__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .standards__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .standards__principle {
+    gap: 1rem;
+  }
+}
