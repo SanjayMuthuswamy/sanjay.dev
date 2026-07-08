@@ -5,10 +5,10 @@ import './Standards.css'
 
 const STANDARDS = [
   {
-    number: '0',
+    number: '99.9',
     suffix: '%',
-    label: 'Hallucination Rate',
-    description: 'My RAG pipelines are built for precision — source-grounded answers with hybrid retrieval and cross-encoder reranking. No fabricated outputs, ever.',
+    label: 'System Reliability',
+    description: 'Systems engineered to be robust, highly available, and capable of processing complex AI pipelines without failing or dropping requests.',
   },
   {
     number: '8.3',
@@ -17,10 +17,10 @@ const STANDARDS = [
     description: 'Consistent academic excellence at Bannari Amman Institute of Technology, balancing coursework with real-world engineering and open-source contribution.',
   },
   {
-    number: '90.8',
-    suffix: '%',
-    label: 'nDCG@5 Retrieval Score',
-    description: 'Benchmark-validated retrieval quality across AskMe\'s hybrid search architecture — combining FAISS vector search with BM25 and reranking.',
+    number: '50',
+    suffix: '+',
+    label: 'Models Evaluated',
+    description: 'Extensive hands-on experience deploying, benchmarking, and fine-tuning state-of-the-art open-source LLMs and deep learning architectures.',
   },
   {
     number: '100',
