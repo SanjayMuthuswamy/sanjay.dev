@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Lenis from 'lenis'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -9,10 +9,22 @@ import OpenSource from './components/OpenSource'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Cursor from './components/Cursor'
+import Loader from './components/Loader'
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
-    // Initialize Lenis smooth scrolling
+    // Loader disappears after 1.8s (animation completes)
+    const timer = setTimeout(() => setIsLoading(false), 1800)
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    // Don't start Lenis until page is done loading
+    if (isLoading) return
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -30,10 +42,17 @@ export default function App() {
     return () => {
       lenis.destroy()
     }
-  }, [])
+  }, [isLoading])
 
   return (
     <>
+      {/* Custom physics cursor — desktop only */}
+      <Cursor />
+
+      {/* Entry loading sequence */}
+      <Loader isVisible={isLoading} />
+
+      {/* Main content */}
       <Navbar />
       <main>
         <Hero />

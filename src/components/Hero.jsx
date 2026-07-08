@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useMagnetic } from '../hooks/useMagnetic'
+import LiveBadge from './LiveBadge'
 import './Hero.css'
 
 const LINE_VARIANTS = {
@@ -41,7 +42,11 @@ export default function Hero() {
 
   return (
     <section className="hero" ref={sectionRef} id="hero">
-      {/* Decorative Elements */}
+      {/* Ambient background glows */}
+      <div className="hero__glow hero__glow--rust" aria-hidden="true" />
+      <div className="hero__glow hero__glow--olive" aria-hidden="true" />
+
+      {/* Decorative ring */}
       <motion.div className="hero__ornament hero__ornament--top-right" style={{ y: parallaxY }}>
         <svg width="280" height="280" viewBox="0 0 280 280" fill="none">
           <circle cx="140" cy="140" r="139" stroke="var(--border-light)" strokeWidth="1" />
@@ -51,6 +56,15 @@ export default function Hero() {
       </motion.div>
 
       <motion.div className="hero__content container" style={{ opacity }}>
+        {/* Live location + time badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <LiveBadge />
+        </motion.div>
+
         <motion.div
           className="hero__label"
           custom={0.4}

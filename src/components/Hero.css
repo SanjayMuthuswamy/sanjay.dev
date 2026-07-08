@@ -7,6 +7,41 @@
   overflow: hidden;
 }
 
+/* Ambient glows — very subtle, atmospheric */
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  will-change: transform;
+  animation: glow-drift 12s ease-in-out infinite alternate;
+}
+
+.hero__glow--rust {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(194, 85, 58, 0.08) 0%, transparent 70%);
+  top: -15%;
+  right: 5%;
+  animation-delay: 0s;
+}
+
+.hero__glow--olive {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(74, 103, 65, 0.06) 0%, transparent 70%);
+  bottom: 0%;
+  left: -10%;
+  animation-delay: -6s;
+}
+
+@keyframes glow-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, -20px) scale(1.06); }
+}
+
+
+
 .hero__ornament {
   position: absolute;
   pointer-events: none;

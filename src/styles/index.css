@@ -67,6 +67,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  cursor: none;
 }
 
 body {
@@ -76,6 +77,12 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  cursor: none;
+}
+
+@media (hover: none) {
+  html, body { cursor: auto; }
+  a, button { cursor: auto; }
 }
 
 /* Subtle grain texture overlay */
