@@ -73,6 +73,12 @@
   font-size: 0.75rem;
 }
 
+.project-card__idx {
+  color: var(--accent-warm); /* Highlights the 01, 02, etc. in orange */
+  font-weight: 600;
+  font-size: 0.875rem !important; /* Make it slightly larger */
+}
+
 .project-card__divider {
   font-size: 0.75rem;
   color: var(--border-medium);

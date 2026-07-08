@@ -53,20 +53,21 @@ export default function About() {
             <div className="about__bio">
               <p className="text-body">
                 I'm an AI & Data Science undergraduate at Bannari Amman Institute
-                of Technology, driven by a singular focus: building AI-powered systems
-                that don't just work — they <strong>think, retrieve, and reason</strong> at
-                production scale.
+                of Technology, driven by a singular focus: building robust, intelligent systems
+                that solve complex problems with elegance and efficiency.
               </p>
               <p className="text-body">
-                My work spans the full depth of the modern AI stack — from engineering
-                RAG pipelines with hybrid retrieval and cross-encoder reranking, to training
-                CNN+LSTM deep learning models for real-time deepfake detection, to architecting
-                agentic AI platforms that autonomously gather and synthesize competitive intelligence.
+                My approach bridges the gap between theoretical data science and practical
+                software engineering. I specialize in developing production-grade AI solutions,
+                from designing advanced RAG architectures to managing relational databases
+                like MySQL for seamless data integration. I believe in writing code that is
+                clean, scalable, and built for the long term.
               </p>
               <p className="text-body">
-                I'm also an open-source contributor to Hugging Face's PEFT library,
-                an Oracle Cloud AI Certified Associate, an Oracle Certified Java SE 17 Developer,
-                and a hackathon finalist who ships code that's built to last — not just to demo.
+                Beyond my core engineering work, I'm an open-source contributor to Hugging Face's
+                PEFT library, an Oracle Cloud AI Certified Associate, and an Oracle Certified
+                Java SE 17 Developer. I am passionate about continuous learning and deeply
+                committed to pushing the boundaries of what technology can achieve.
               </p>
             </div>
           </motion.div>

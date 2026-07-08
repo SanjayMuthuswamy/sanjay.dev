@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import './Marquee.css'
 
@@ -9,6 +10,14 @@ const MARQUEE_ITEMS = [
 ]
 
 export default function Marquee() {
+  const [duration, setDuration] = useState(30)
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setDuration(12) // Much faster on mobile
+    }
+  }, [])
+
   // Duplicate for seamless loop
   const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS]
 
@@ -21,7 +30,7 @@ export default function Marquee() {
           x: {
             repeat: Infinity,
             repeatType: 'loop',
-            duration: 30,
+            duration: duration,
             ease: 'linear',
           },
         }}
