@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Marquee from './components/Marquee'
 import Standards from './components/Standards'
+import OpenSource from './components/OpenSource'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -39,6 +40,7 @@ export default function App() {
         <Marquee />
         <About />
         <Standards />
+        <OpenSource />
         <Projects />
         <Contact />
       </main>

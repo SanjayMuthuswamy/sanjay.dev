@@ -1,12 +1,29 @@
 import { motion } from 'framer-motion'
 import { useScrollReveal, revealVariants } from '../hooks/useAnimations'
+import { 
+  Terminal, Coffee, FileCode2, Code2, Zap, Link2, 
+  BrainCircuit, Layers, Smile, Database, Search, 
+  Box, Github, Send 
+} from 'lucide-react'
 import './About.css'
 
 const TOOLS = [
-  'Python', 'Java', 'TypeScript', 'React.js', 'FastAPI',
-  'LangChain', 'TensorFlow', 'Keras', 'Hugging Face',
-  'PostgreSQL', 'MySQL', 'FAISS', 'Docker',
-  'SQL', 'GitHub', 'Postman',
+  { name: 'Python', icon: Terminal },
+  { name: 'Java', icon: Coffee },
+  { name: 'TypeScript', icon: FileCode2 },
+  { name: 'React.js', icon: Code2 },
+  { name: 'FastAPI', icon: Zap },
+  { name: 'LangChain', icon: Link2 },
+  { name: 'TensorFlow', icon: BrainCircuit },
+  { name: 'Keras', icon: Layers },
+  { name: 'Hugging Face', icon: Smile },
+  { name: 'PostgreSQL', icon: Database },
+  { name: 'MySQL', icon: Database },
+  { name: 'FAISS', icon: Search },
+  { name: 'Docker', icon: Box },
+  { name: 'SQL', icon: Database },
+  { name: 'GitHub', icon: Github },
+  { name: 'Postman', icon: Send },
 ]
 
 export default function About() {
@@ -64,13 +81,14 @@ export default function About() {
           <motion.div className="about__tools-grid" variants={revealVariants.staggerFast}>
             {TOOLS.map((tool) => (
               <motion.span
-                key={tool}
-                className="about__tool-tag"
+                key={tool.name}
+                className="about__tool-tag group"
                 variants={revealVariants.fadeUp}
                 whileHover={{ y: -3, backgroundColor: 'var(--bg-dark)', color: 'var(--text-inverse)' }}
                 transition={{ duration: 0.2 }}
               >
-                {tool}
+                <tool.icon className="about__tool-icon" strokeWidth={1.5} />
+                {tool.name}
               </motion.span>
             ))}
           </motion.div>

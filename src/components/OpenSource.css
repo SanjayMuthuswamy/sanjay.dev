@@ -1,0 +1,142 @@
+.opensource {
+  background-color: var(--bg-primary);
+}
+
+.opensource__header {
+  margin-bottom: var(--space-3xl);
+}
+
+.opensource__header .text-label {
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.opensource__title em {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent-gold);
+}
+
+.opensource__card {
+  position: relative;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-medium);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(28, 25, 23, 0.05);
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+}
+
+.opensource__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 64px rgba(28, 25, 23, 0.08);
+}
+
+.opensource__card-inner {
+  position: relative;
+  z-index: 2;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.opensource__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.opensource__card-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.opensource__brand-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.opensource__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border-light);
+  border-radius: 100px;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.opensource__card-link:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-medium);
+}
+
+.opensource__content {
+  position: relative;
+}
+
+.opensource__pr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6E56CF; /* Purple hue typical for merged PRs */
+  background-color: rgba(110, 86, 207, 0.1);
+  padding: 0.375rem 0.875rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.opensource__impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.opensource__impact-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.opensource__impact-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-gold);
+}
+
+.opensource__impact-list strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.opensource__glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .opensource__card-inner {
+    padding: 2rem;
+  }
+}

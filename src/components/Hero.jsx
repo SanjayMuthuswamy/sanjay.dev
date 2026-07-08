@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useMagnetic } from '../hooks/useMagnetic'
 import './Hero.css'
 
 const LINE_VARIANTS = {
@@ -33,6 +34,10 @@ export default function Hero() {
 
   const parallaxY = useTransform(scrollYProgress, [0, 1], [0, 120])
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
+
+  // Magnetic button hooks
+  const primaryMagnetic = useMagnetic(0.2)
+  const secondaryMagnetic = useMagnetic(0.2)
 
   return (
     <section className="hero" ref={sectionRef} id="hero">
@@ -96,9 +101,11 @@ export default function Hero() {
           variants={FADE_UP}
         >
           <motion.a
+            ref={primaryMagnetic.ref}
             href="#work"
             className="hero__btn hero__btn--primary"
-            whileHover={{ scale: 1.04, y: -2 }}
+            style={{ x: primaryMagnetic.x, y: primaryMagnetic.y }}
+            whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             onClick={(e) => {
               e.preventDefault()
@@ -108,9 +115,12 @@ export default function Hero() {
             View Selected Work
             <span className="hero__btn-arrow">→</span>
           </motion.a>
+          
           <motion.a
+            ref={secondaryMagnetic.ref}
             href="#about"
             className="hero__btn hero__btn--secondary"
+            style={{ x: secondaryMagnetic.x, y: secondaryMagnetic.y }}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             onClick={(e) => {

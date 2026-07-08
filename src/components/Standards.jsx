@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { ShieldCheck, Landmark, Rocket, HeartHandshake } from 'lucide-react'
 import { useScrollReveal, revealVariants } from '../hooks/useAnimations'
 import './Standards.css'
 
@@ -31,10 +32,22 @@ const STANDARDS = [
 ]
 
 const PRINCIPLES = [
-  'If the model can\'t cite its source, the answer doesn\'t ship.',
-  'Architecture decisions are permanent. Treat them that way.',
-  'Ship systems, not scripts. Production-grade or nothing.',
-  'Open source isn\'t charity — it\'s how you sharpen the craft.',
+  {
+    icon: ShieldCheck,
+    text: 'If the model can\'t cite its source, the answer doesn\'t ship.',
+  },
+  {
+    icon: Landmark,
+    text: 'Architecture decisions are permanent. Treat them that way.',
+  },
+  {
+    icon: Rocket,
+    text: 'Ship systems, not scripts. Production-grade or nothing.',
+  },
+  {
+    icon: HeartHandshake,
+    text: 'Open source isn\'t charity — it\'s how you sharpen the craft.',
+  },
 ]
 
 function AnimatedNumber({ value, suffix }) {
@@ -135,13 +148,13 @@ export default function Standards() {
             {PRINCIPLES.map((principle, i) => (
               <motion.li
                 key={i}
-                className="standards__principle"
+                className="standards__principle group"
                 variants={revealVariants.fadeUp}
               >
-                <span className="standards__principle-idx">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span className="standards__principle-text">{principle}</span>
+                <div className="standards__principle-icon-wrap">
+                  <principle.icon className="standards__principle-icon" strokeWidth={1.5} />
+                </div>
+                <span className="standards__principle-text">{principle.text}</span>
               </motion.li>
             ))}
           </motion.ul>
