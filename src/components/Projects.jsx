@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useScrollReveal, revealVariants } from '../hooks/useAnimations'
 import './Projects.css'
@@ -98,6 +99,8 @@ export default function Projects() {
 }
 
 function ProjectCard({ project }) {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <motion.article
       className="project-card"
@@ -131,7 +134,15 @@ function ProjectCard({ project }) {
           </div>
 
           <div className="project-card__right">
-            <p className="project-card__desc text-body">{project.description}</p>
+            <p className={`project-card__desc text-body ${expanded ? 'project-card__desc--expanded' : ''}`}>
+              {project.description}
+            </p>
+            <button 
+              className="project-card__read-more" 
+              onClick={() => setExpanded(!expanded)}
+            >
+              {expanded ? 'Read Less' : 'Read More'}
+            </button>
             <div className="project-card__tech">
               {project.tech.map((t) => (
                 <span key={t} className="project-card__tech-tag">{t}</span>

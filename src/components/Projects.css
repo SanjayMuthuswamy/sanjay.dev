@@ -111,6 +111,10 @@
   margin-bottom: 1.25rem;
 }
 
+.project-card__read-more {
+  display: none;
+}
+
 .project-card__tech {
   display: flex;
   flex-wrap: wrap;
@@ -181,5 +185,27 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card__desc--expanded {
+    -webkit-line-clamp: unset;
+  }
+
+  .project-card__read-more {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-rust);
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+  }
+  
+  .project-card__read-more:hover {
+    text-decoration: underline;
   }
 }
