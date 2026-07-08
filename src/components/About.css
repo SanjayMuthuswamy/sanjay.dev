@@ -20,6 +20,28 @@
   color: var(--accent-rust);
 }
 
+.about__tagline {
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.about__tagline::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--accent-rust);
+  flex-shrink: 0;
+}
+
 .about__bio {
   display: flex;
   flex-direction: column;

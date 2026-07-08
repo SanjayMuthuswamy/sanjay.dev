@@ -44,6 +44,9 @@ export default function About() {
               Engineer by discipline,<br />
               <em>builder</em> by instinct.
             </h2>
+            <p className="about__tagline">
+              Still growing. Won't stop until I've mastered it.
+            </p>
           </motion.div>
 
           <motion.div className="about__right" variants={revealVariants.fadeUp}>
