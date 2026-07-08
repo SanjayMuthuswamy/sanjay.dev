@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--bg-dark);
-  border-top: 1px solid rgba(244, 240, 234, 0.08);
+  border-top: 1px solid var(--border-light);
   padding: 1.5rem 0;
 }
 
@@ -15,7 +15,8 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.8125rem;
-  color: rgba(244, 240, 234, 0.4);
+  color: var(--text-inverse);
+  opacity: 0.5;
 }
 
 .footer__sep {
@@ -31,15 +32,16 @@
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(244, 240, 234, 0.4);
+  color: var(--text-inverse);
+  opacity: 0.4;
   background: none;
   border: none;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .footer__top-btn:hover {
-  color: rgba(244, 240, 234, 0.8);
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
