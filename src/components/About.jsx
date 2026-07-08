@@ -65,8 +65,8 @@ export default function About() {
               </p>
               <p className="text-body">
                 I'm also an open-source contributor to Hugging Face's PEFT library,
-                an Oracle Cloud AI Certified Associate, and a hackathon finalist who
-                ships code that's built to last — not just to demo.
+                an Oracle Cloud AI Certified Associate, an Oracle Certified Java SE 17 Developer,
+                and a hackathon finalist who ships code that's built to last — not just to demo.
               </p>
             </div>
           </motion.div>
