@@ -1,10 +1,25 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Sun, Moon } from 'lucide-react'
 import './Navbar.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [theme, setTheme] = useState('light')
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light'
+    setTheme(savedTheme)
+    document.documentElement.setAttribute('data-theme', savedTheme)
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
+    document.documentElement.setAttribute('data-theme', newTheme)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -60,6 +75,9 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <div className="navbar__socials">
+            <button className="navbar__theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
             <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer" className="navbar__social-link">CV</a>
             <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer" className="navbar__social-link">LI</a>
             <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer" className="navbar__social-link">GH</a>
@@ -107,6 +125,9 @@ export default function Navbar() {
               </a>
             ))}
             <div className="navbar__mobile-socials">
+              <button onClick={toggleTheme}>
+                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+              </button>
               <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
               <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer">GitHub</a>

@@ -22,6 +22,8 @@
 
   --border-light: #E7E0D6;
   --border-medium: #D6CFC4;
+  --bg-nav: rgba(244, 240, 234, 0.85);
+  --bg-mobile-nav: rgba(244, 240, 234, 0.97);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -51,6 +53,31 @@
   --grain-opacity: 0.03;
 }
 
+[data-theme='dark'] {
+  --bg-primary: #12100F;
+  --bg-secondary: #1C1917;
+  --bg-elevated: #262220;
+  --bg-accent: #302A27;
+  --bg-dark: #F4F0EA;
+
+  --text-primary: #EBE5DF;
+  --text-secondary: #A8A29E;
+  --text-tertiary: #78716C;
+  --text-inverse: #1C1917;
+
+  --accent-warm: #D97706;
+  --accent-rust: #D06548;
+  --accent-olive: #68855F;
+  --accent-gold: #B48A36;
+
+  --border-light: #302A27;
+  --border-medium: #443C38;
+  --bg-nav: rgba(18, 16, 15, 0.85);
+  --bg-mobile-nav: rgba(18, 16, 15, 0.97);
+  
+  --grain-opacity: 0.04;
+}
+
 /* ============================================
    RESET & BASE
    ============================================ */
@@ -78,6 +105,7 @@ body {
   overflow-x: hidden;
   position: relative;
   cursor: none;
+  transition: background-color 0.4s var(--ease-out-expo), color 0.4s var(--ease-out-expo);
 }
 
 @media (hover: none) {
@@ -195,6 +223,7 @@ button {
 .section {
   padding: var(--space-3xl) 0;
   scroll-margin-top: var(--nav-height);
+  transition: background-color 0.4s var(--ease-out-expo);
 }
 
 .section-divider {

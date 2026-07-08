@@ -9,7 +9,7 @@
 }
 
 .navbar--scrolled {
-  background-color: rgba(244, 240, 234, 0.85);
+  background-color: var(--bg-nav);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 var(--border-light);
@@ -73,6 +73,22 @@
   gap: 1.25rem;
 }
 
+.navbar__theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--text-tertiary);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar__theme-toggle:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-accent);
+}
+
 .navbar__social-link {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -132,7 +148,7 @@
 }
 
 .navbar__cta:hover {
-  background-color: #292524;
+  opacity: 0.9;
 }
 
 .navbar__hamburger {
@@ -171,7 +187,7 @@
   top: var(--nav-height);
   left: 0;
   right: 0;
-  background-color: rgba(244, 240, 234, 0.97);
+  background-color: var(--bg-mobile-nav);
   backdrop-filter: blur(20px);
   padding: 1.5rem;
   display: flex;
@@ -205,7 +221,8 @@
   border-top: 1px solid var(--border-light);
 }
 
-.navbar__mobile-socials a {
+.navbar__mobile-socials a,
+.navbar__mobile-socials button {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   font-weight: 500;
@@ -213,9 +230,14 @@
   letter-spacing: 0.05em;
   color: var(--text-secondary);
   text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-.navbar__mobile-socials a:active {
+.navbar__mobile-socials a:active,
+.navbar__mobile-socials button:active {
   color: var(--text-primary);
 }
 
