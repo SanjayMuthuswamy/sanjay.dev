@@ -58,18 +58,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <motion.a
-          href="#contact"
-          className="navbar__cta"
-          onClick={(e) => handleClick(e, '#contact')}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          Let's Talk
-        </motion.a>
+        <div className="navbar__actions">
+          <div className="navbar__socials">
+            <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer" className="navbar__social-link">LI</a>
+            <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer" className="navbar__social-link">GH</a>
+          </div>
+          <motion.a
+            href="#contact"
+            className="navbar__cta"
+            onClick={(e) => handleClick(e, '#contact')}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Let's Talk
+          </motion.a>
+        </div>
 
         <button
           className={`navbar__hamburger ${mobileOpen ? 'navbar__hamburger--open' : ''}`}
@@ -99,6 +105,10 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <div className="navbar__mobile-socials">
+              <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
             <a href="#contact" className="navbar__cta navbar__cta--mobile" onClick={(e) => handleClick(e, '#contact')}>
               Let's Talk
             </a>
