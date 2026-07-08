@@ -7,7 +7,6 @@ import Marquee from './components/Marquee'
 import Standards from './components/Standards'
 import OpenSource from './components/OpenSource'
 import Projects from './components/Projects'
-import Manifesto from './components/Manifesto'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Cursor from './components/Cursor'
@@ -48,7 +47,6 @@ export default function App() {
         <Standards />
         <OpenSource />
         <Projects />
-        <Manifesto />
         <Contact />
       </main>
       <Footer />
