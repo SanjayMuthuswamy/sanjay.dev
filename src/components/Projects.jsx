@@ -74,6 +74,24 @@ export default function Projects() {
             <ProjectCard key={project.id} project={project} />
           ))}
         </motion.div>
+
+        <motion.div
+          className="projects__more"
+          variants={revealVariants.fadeUp}
+          initial="hidden"
+          animate={controls}
+        >
+          <motion.a
+            href="https://github.com/SanjayMuthuswamy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projects__more-btn"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Explore GitHub Archive
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   )
@@ -92,8 +110,6 @@ function ProjectCard({ project }) {
             <span className="project-card__idx text-mono">{project.idx}</span>
             <span className="project-card__divider">/</span>
             <span className="project-card__role text-mono">{project.role}</span>
-            <span className="project-card__divider">/</span>
-            <span className="project-card__year text-mono">{project.year}</span>
           </div>
           {project.github && (
             <motion.a

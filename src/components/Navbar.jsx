@@ -60,6 +60,7 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <div className="navbar__socials">
+            <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer" className="navbar__social-link">CV</a>
             <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer" className="navbar__social-link">LI</a>
             <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer" className="navbar__social-link">GH</a>
           </div>
@@ -91,7 +92,7 @@ export default function Navbar() {
           <motion.div
             className="navbar__mobile"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: 'calc(100vh - var(--nav-height))' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -106,6 +107,7 @@ export default function Navbar() {
               </a>
             ))}
             <div className="navbar__mobile-socials">
+              <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
               <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer">GitHub</a>
             </div>

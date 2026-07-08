@@ -194,6 +194,7 @@ button {
 
 .section {
   padding: var(--space-3xl) 0;
+  scroll-margin-top: var(--nav-height);
 }
 
 .section-divider {

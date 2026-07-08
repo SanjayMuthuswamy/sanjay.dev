@@ -3,6 +3,7 @@ import { useScrollReveal, revealVariants } from '../hooks/useAnimations'
 import './Contact.css'
 
 const SOCIALS = [
+  { label: 'Resume', href: '/Sanjay_Resume.pdf' },
   { label: 'GitHub', href: 'https://github.com/SanjayMuthuswamy' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sanjaymuthuswamy/' },
   { label: 'LeetCode', href: 'https://leetcode.com/SanjayM_' },

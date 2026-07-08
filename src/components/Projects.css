@@ -54,6 +54,8 @@
   color: var(--text-tertiary);
   text-decoration: none;
   transition: color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .project-card__github:hover {
@@ -131,6 +133,29 @@
   transform-origin: left;
 }
 
+.projects__more {
+  margin-top: var(--space-2xl);
+  text-align: center;
+}
+
+.projects__more-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-inverse);
+  background-color: var(--bg-dark);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.projects__more-btn:hover {
+  background-color: #292524;
+}
+
 @media (max-width: 768px) {
   .project-card__content {
     grid-template-columns: 1fr;
@@ -143,5 +168,12 @@
 
   .project-card:hover .project-card__inner {
     padding-left: 0.5rem;
+  }
+
+  .project-card__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
