@@ -66,6 +66,27 @@ export const revealVariants = {
     },
   },
 
+  staggerWords: {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  },
+
+  wordReveal: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  },
+
   staggerFast: {
     hidden: {},
     visible: {

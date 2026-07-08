@@ -38,15 +38,23 @@ export default function About() {
           initial="hidden"
           animate={controls}
         >
-          <motion.div className="about__left" variants={revealVariants.fadeUp}>
-            <span className="text-label about__label">About</span>
-            <h2 className="heading-xl about__heading">
-              Engineer by discipline,<br />
-              <em>builder</em> by instinct.
-            </h2>
-            <p className="about__tagline">
+          <motion.div className="about__left" variants={revealVariants.staggerContainer}>
+            <motion.span className="text-label about__label" variants={revealVariants.fadeUp}>About</motion.span>
+            <motion.h2 
+              className="heading-xl about__heading"
+              variants={revealVariants.staggerWords}
+            >
+              <motion.span variants={revealVariants.wordReveal} style={{ display: 'inline-block', marginRight: '0.25em' }}>Engineer</motion.span>
+              <motion.span variants={revealVariants.wordReveal} style={{ display: 'inline-block', marginRight: '0.25em' }}>by</motion.span>
+              <motion.span variants={revealVariants.wordReveal} style={{ display: 'inline-block' }}>discipline,</motion.span>
+              <br />
+              <motion.em variants={revealVariants.wordReveal} style={{ display: 'inline-block', marginRight: '0.25em' }}>builder</motion.em>
+              <motion.span variants={revealVariants.wordReveal} style={{ display: 'inline-block', marginRight: '0.25em' }}>by</motion.span>
+              <motion.span variants={revealVariants.wordReveal} style={{ display: 'inline-block' }}>instinct.</motion.span>
+            </motion.h2>
+            <motion.p className="about__tagline" variants={revealVariants.fadeUp}>
               Still growing. The learning never stops.
-            </p>
+            </motion.p>
           </motion.div>
 
           <motion.div className="about__right" variants={revealVariants.fadeUp}>
