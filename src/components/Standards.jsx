@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { ShieldCheck, Landmark, Rocket, HeartHandshake } from 'lucide-react'
 import { useScrollReveal, revealVariants } from '../hooks/useAnimations'
 import './Standards.css'
 
@@ -33,19 +32,19 @@ const STANDARDS = [
 
 const PRINCIPLES = [
   {
-    icon: ShieldCheck,
+    num: '01',
     text: 'If the model can\'t cite its source, the answer doesn\'t ship.',
   },
   {
-    icon: Landmark,
+    num: '02',
     text: 'Architecture decisions are permanent. Treat them that way.',
   },
   {
-    icon: Rocket,
+    num: '03',
     text: 'Ship systems, not scripts. Production-grade or nothing.',
   },
   {
-    icon: HeartHandshake,
+    num: '04',
     text: 'Open source isn\'t charity — it\'s how you sharpen the craft.',
   },
 ]
@@ -144,20 +143,18 @@ export default function Standards() {
           <motion.span className="text-label" variants={revealVariants.fadeUp}>
             Operating Principles
           </motion.span>
-          <motion.ul className="standards__principles-list" variants={revealVariants.staggerContainer}>
+          <motion.div className="standards__principles-grid" variants={revealVariants.staggerContainer}>
             {PRINCIPLES.map((principle, i) => (
-              <motion.li
+              <motion.div
                 key={i}
-                className="standards__principle group"
+                className="standards__principle-card group"
                 variants={revealVariants.fadeUp}
               >
-                <div className="standards__principle-icon-wrap">
-                  <principle.icon className="standards__principle-icon" strokeWidth={1.5} />
-                </div>
-                <span className="standards__principle-text">{principle.text}</span>
-              </motion.li>
+                <span className="standards__principle-num">{principle.num}</span>
+                <p className="standards__principle-text">{principle.text}</p>
+              </motion.div>
             ))}
-          </motion.ul>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -13,17 +13,10 @@ import Cursor from './components/Cursor'
 import Loader from './components/Loader'
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [loaderDone, setLoaderDone] = useState(false)
 
   useEffect(() => {
-    // Loader disappears after 1.8s (animation completes)
-    const timer = setTimeout(() => setIsLoading(false), 1800)
-    return () => clearTimeout(timer)
-  }, [])
-
-  useEffect(() => {
-    // Don't start Lenis until page is done loading
-    if (isLoading) return
+    if (!loaderDone) return
 
     const lenis = new Lenis({
       duration: 1.2,
@@ -38,21 +31,14 @@ export default function App() {
     }
 
     requestAnimationFrame(raf)
-
-    return () => {
-      lenis.destroy()
-    }
-  }, [isLoading])
+    return () => lenis.destroy()
+  }, [loaderDone])
 
   return (
     <>
-      {/* Custom physics cursor — desktop only */}
       <Cursor />
+      <Loader onComplete={() => setLoaderDone(true)} />
 
-      {/* Entry loading sequence */}
-      <Loader isVisible={isLoading} />
-
-      {/* Main content */}
       <Navbar />
       <main>
         <Hero />

@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useScrollReveal, revealVariants } from '../hooks/useAnimations'
-import { 
-  Terminal, Coffee, FileCode2, Code2, Zap, Link2, 
-  BrainCircuit, Layers, Smile, Database, Search, 
-  Box, Github, Send 
+import {
+  Terminal, Coffee, FileCode2, Code2, Zap, Link2,
+  BrainCircuit, Layers, Smile, Database, Search,
+  Box, GitBranch, Mail
 } from 'lucide-react'
 import './About.css'
 
@@ -22,8 +22,8 @@ const TOOLS = [
   { name: 'FAISS', icon: Search },
   { name: 'Docker', icon: Box },
   { name: 'SQL', icon: Database },
-  { name: 'GitHub', icon: Github },
-  { name: 'Postman', icon: Send },
+  { name: 'GitHub', icon: GitBranch },
+  { name: 'Postman', icon: Mail },
 ]
 
 export default function About() {
