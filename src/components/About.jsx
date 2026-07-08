@@ -45,7 +45,7 @@ export default function About() {
               <em>builder</em> by instinct.
             </h2>
             <p className="about__tagline">
-              Still growing. Won't stop until I've mastered it.
+              Still growing. The learning never stops.
             </p>
           </motion.div>
 
