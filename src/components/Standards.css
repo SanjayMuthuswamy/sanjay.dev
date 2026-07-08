@@ -93,7 +93,7 @@
   display: flex;
   align-items: flex-end;
   min-height: 200px;
-  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s ease;
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s ease, background-color 0.4s ease;
 }
 
 /* Asymmetrical Layout */
@@ -103,9 +103,10 @@
 .standards__principle-card:nth-child(4) { grid-column: span 7; }
 
 .standards__principle-card:hover {
-  transform: translateY(-4px);
+  transform: scale(1.03);
   box-shadow: 0 12px 32px rgba(28, 25, 23, 0.05);
   border-color: var(--accent-rust);
+  background-color: var(--accent-rust);
 }
 
 .standards__principle-num {
@@ -124,7 +125,7 @@
 }
 
 .standards__principle-card:hover .standards__principle-num {
-  color: var(--accent-rust);
+  color: var(--text-inverse);
   opacity: 0.15;
   transform: scale(1.05) translate(-10px, 10px);
 }
@@ -138,6 +139,11 @@
   position: relative;
   z-index: 1;
   max-width: 90%;
+  transition: color 0.4s ease;
+}
+
+.standards__principle-card:hover .standards__principle-text {
+  color: var(--text-inverse);
 }
 
 @media (max-width: 1024px) {
