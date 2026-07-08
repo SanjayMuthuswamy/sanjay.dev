@@ -65,6 +65,9 @@ export default function About() {
                 an Oracle Cloud AI Certified Associate, and a hackathon finalist who
                 ships code that's built to last — not just to demo.
               </p>
+              <p className="text-body" style={{ marginTop: '2rem', borderLeft: '2px solid var(--accent-rust)', paddingLeft: '1rem', fontStyle: 'italic' }}>
+                Beyond the code, I view engineering as a lifelong pursuit. I am relentlessly pushing my own boundaries to grow and achieve my vision—and even when I reach those milestones, the learning won't stop. I'm not here just to participate in this industry; I am here to master the craft.
+              </p>
             </div>
           </motion.div>
         </motion.div>

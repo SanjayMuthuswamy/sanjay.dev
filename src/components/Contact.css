@@ -69,15 +69,15 @@
 
 .contact__social-link {
   font-size: 0.9375rem;
-  color: rgba(244, 240, 234, 0.5);
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: rgba(244, 240, 234, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(244, 240, 234, 0.2);
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .contact__social-link:hover {
   color: var(--text-inverse);
-}
-
-.contact__social-link::after {
-  background-color: var(--text-inverse) !important;
+  text-decoration-color: var(--text-inverse);
 }
