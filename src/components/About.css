@@ -31,31 +31,6 @@
   font-weight: 500;
 }
 
-.about__manifesto {
-  margin-top: 2.5rem;
-  padding: 2rem;
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--border-medium);
-  border-left: 3px solid var(--accent-rust);
-  border-radius: 0 12px 12px 0;
-  box-shadow: 0 12px 32px rgba(28, 25, 23, 0.04);
-}
-
-.about__manifesto p {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--text-primary);
-  font-style: italic;
-}
-
-.about__manifesto strong {
-  font-style: normal;
-  font-weight: 600;
-  color: var(--accent-rust);
-}
-
 .about__tools {
   margin-top: var(--space-3xl);
   padding-top: var(--space-2xl);

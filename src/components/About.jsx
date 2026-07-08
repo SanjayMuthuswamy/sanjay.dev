@@ -65,11 +65,6 @@ export default function About() {
                 an Oracle Cloud AI Certified Associate, and a hackathon finalist who
                 ships code that's built to last — not just to demo.
               </p>
-              <div className="about__manifesto">
-                <p>
-                  Beyond the code, I view engineering as a lifelong pursuit. I am relentlessly pushing my own boundaries to grow and achieve my vision—and even when I reach those milestones, the learning won't stop. I'm not here just to participate in this industry; <strong>I am here to master the craft.</strong>
-                </p>
-              </div>
             </div>
           </motion.div>
         </motion.div>
