@@ -7,6 +7,7 @@ const SOCIALS = [
   { label: 'GitHub', href: 'https://github.com/SanjayMuthuswamy' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sanjaymuthuswamy/' },
   { label: 'LeetCode', href: 'https://leetcode.com/SanjayM_' },
+  { label: 'Kaggle', href: 'https://www.kaggle.com/msthename' },
 ]
 
 export default function Contact() {

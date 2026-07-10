@@ -81,6 +81,7 @@ export default function Navbar() {
             <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer" className="navbar__social-link">CV</a>
             <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer" className="navbar__social-link">LI</a>
             <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer" className="navbar__social-link">GH</a>
+            <a href="https://www.kaggle.com/msthename" target="_blank" rel="noreferrer" className="navbar__social-link">KG</a>
           </div>
           <motion.a
             href="#contact"
@@ -131,6 +132,7 @@ export default function Navbar() {
               <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
               <a href="https://www.linkedin.com/in/sanjaymuthuswamy/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://github.com/SanjayMuthuswamy" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.kaggle.com/msthename" target="_blank" rel="noreferrer">Kaggle</a>
             </div>
             <a href="#contact" className="navbar__cta navbar__cta--mobile" onClick={(e) => handleClick(e, '#contact')}>
               Let's Talk
