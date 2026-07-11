@@ -165,8 +165,8 @@
   font-family: var(--font-body);
   font-size: 0.9375rem;
   font-weight: 500;
-  color: var(--text-inverse);
-  background-color: var(--bg-dark);
+  color: #F4F0EA;
+  background-color: #1C1917;
   border-radius: 100px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -218,4 +218,9 @@
   .project-card__read-more:hover {
     text-decoration: underline;
   }
+}
+
+[data-theme='dark'] .projects__more-btn {
+  background-color: #F4F0EA;
+  color: #1C1917;
 }
