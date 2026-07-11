@@ -14,7 +14,7 @@ export default function Marquee() {
 
   useEffect(() => {
     if (window.innerWidth < 768) {
-      setDuration(12) // Much faster on mobile
+      setDuration(8) // Much faster on mobile
     }
   }, [])
 

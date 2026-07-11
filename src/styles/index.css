@@ -95,6 +95,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   cursor: none;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
